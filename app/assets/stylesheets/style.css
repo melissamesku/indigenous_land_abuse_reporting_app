@@ -1,0 +1,30 @@
+@import url(https://fonts.googleapis.com/css?family=Ek+Mukta:400,800);
+
+body {
+	font-family: 'Ek Mukta';
+	margin: 0;
+	background: url(bkg.jpg) no-repeat center center fixed; 
+	  -webkit-background-size: cover;
+	  -moz-background-size: cover;
+	  -o-background-size: cover;
+	  background-size: cover;
+}
+nav {
+	background-color: #000;
+	padding: 10px;
+}
+nav ul li {
+	color: #fff;
+	list-style: none;
+}
+nav ul li a {
+	color: #fff;
+	text-transform: uppercase;
+	text-decoration: none;
+}
+nav ul li a:hover {
+	color: #eee;
+}
+.container {
+	padding: 20px;
+}
