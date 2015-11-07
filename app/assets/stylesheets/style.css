@@ -7,7 +7,7 @@ body {
 }
 nav {
 	background-color: #000;
-	padding: 18px;
+	padding: 23px;
 	text-align: right;
 	color:#fff;
 }
@@ -20,6 +20,13 @@ nav a {
 nav a:hover {
 	color: #ff3333;
 }
+nav img {
+	position: absolute;
+	top:0;
+	left: 0;
+	width: 150px;
+	padding: 20px;
+}
 .grey {
 	color: #666;
 	padding-right:30px;
@@ -29,36 +36,53 @@ div {
 }
 .container {
 	padding: 20px;
+	max-width: 900px;
+	margin: 0 auto;
 }
 .testing {
 	background-color: red;
 }
 .bkg {
-	z-index: -1;
-	top:0px;
-	left:0;
-	padding: 80px 0 0 20px;
+	top: 0;
+	left: 0;
+	padding: 40px 0 0 0px;
 	height: 100%;
 	width: 100%;
-	background: url(../../background.jpg) no-repeat center center fixed; 
+	background: url(../../background.jpg) no-repeat center center; 
 	  -webkit-background-size: cover;
 	  -moz-background-size: cover;
 	  -o-background-size: cover;
 	  background-size: cover;
 } 
-.opacity-bkg {
+.opacity-box {
 	float:right;
+	margin-right: 30px;
 	width: 200px;
 	padding: 22px;
-	background-color: #fff;
-	opacity: .7;
+	background-color: rgba(250, 250, 250, .5);
+}
+.opacity-bkg h2 {
+	margin: 0;
 }
 .landing-page-content {
 	color: #fff;
 	text-shadow: 1px 1px 2px rgba(0, 0, 0, 1);
+	padding: 23px;
+}
+.landing-page-bottom {
+
+}
+.col1 {
+	width: 49%;
+	float: left;
+}
+.col2 {
+	width: 49%;
+	float: left;
+	background-color: rgba(150, 150, 150, .5);
 }
 .red-text {
-	width: 400px;
+	max-width: 400px;
 	font-family: 'Oswald';
 	font-size: 1.8em;
 	color: #ff3333;

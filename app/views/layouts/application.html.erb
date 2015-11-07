@@ -8,6 +8,7 @@
 </head>
 <body>
 	<nav>
+		<img src="../../logo.jpg">
 		<% if user_signed_in? %>
 		  <span class="grey">Logged in as <%= current_user.first_name %> </span> 
 		  <%= link_to "View all reports", reports_path %>
@@ -20,8 +21,6 @@
 		<% end %>
 	</nav>
 
-	
-
 	<% if notice %>
 	  <p class="alert alert-success"><%= notice %></p>
 	<% end %>
@@ -29,9 +28,9 @@
 	  <p class="alert alert-danger"><%= alert %></p>
 	<% end %>
 
-	<div class="container">
+
 	<%= yield %>
-	</div>
+
 
 </body>
 </html>

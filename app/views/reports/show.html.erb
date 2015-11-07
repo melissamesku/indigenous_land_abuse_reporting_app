@@ -1,3 +1,17 @@
 <div class="container">
-	whut up?
+	<h1><%= @report.headline %></h1>
+	<img src="<%= @report.image %>" class="border-black">
+	<p> <%= @report.details %></p>
+	<p> Location: <%= @report.location %></p>
+
+	<% @users.each do |user| %>
+	  <% user.reports.each do |report|%>
+		<li>Report made by <%= user.first_name %> <%= user.last_name %></li>
+		<br/>
+	<div class="report-links">
+  	<%= link_to 'Update this report', edit_report_path, :class => 'border-grey' %>
+  	<%= link_to 'Delete this report', report, :method => 'delete', :class => 'border-grey', :confirm => "Are you sure you want to delete this report?" %>
+  </div>
+	  <% end %>
+	<%end%>
 </div>
