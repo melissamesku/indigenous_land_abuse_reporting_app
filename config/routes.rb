@@ -2,11 +2,13 @@ Rails.application.routes.draw do
   # devise_for :users
   devise_for :users, :controllers => { registrations: 'registrations' }
 
-  resources :users
+  resources :reports
 
-  get    'login'   => 'sessions#new'
-  post   'login'   => 'sessions#create'
-  delete 'logout'  => 'sessions#destroy'
+  root 'reports#index'
+
+  # get 'reports/user/:user_id', to: => 'reports#author'
+
+
 
 
 
@@ -87,17 +89,14 @@ end
 #                          PATCH  /users(.:format)               registrations#update
 #                          PUT    /users(.:format)               registrations#update
 #                          DELETE /users(.:format)               registrations#destroy
-#                    users GET    /users(.:format)               users#index
-#                          POST   /users(.:format)               users#create
-#                 new_user GET    /users/new(.:format)           users#new
-#                edit_user GET    /users/:id/edit(.:format)      users#edit
-#                     user GET    /users/:id(.:format)           users#show
-#                          PATCH  /users/:id(.:format)           users#update
-#                          PUT    /users/:id(.:format)           users#update
-#                          DELETE /users/:id(.:format)           users#destroy
-#                    login GET    /login(.:format)               sessions#new
-#                          POST   /login(.:format)               sessions#create
-#                   logout DELETE /logout(.:format)              sessions#destroy
+#                  reports GET    /reports(.:format)             reports#index
+#                          POST   /reports(.:format)             reports#create
+#               new_report GET    /reports/new(.:format)         reports#new
+#              edit_report GET    /reports/:id/edit(.:format)    reports#edit
+#                   report GET    /reports/:id(.:format)         reports#show
+#                          PATCH  /reports/:id(.:format)         reports#update
+#                          PUT    /reports/:id(.:format)         reports#update
+#                          DELETE /reports/:id(.:format)         reports#destroy
 
 
 

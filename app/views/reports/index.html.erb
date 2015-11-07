@@ -1,0 +1,24 @@
+reports#index page
+
+<div>
+	<% @reports.each do |report| %>
+		<% @users.each do |user| %>
+			<% user.reports.each do |report|%>
+			    <%= user.first_name %>
+			<% end %>
+		<%end%>
+
+		<li><%= report.headline %></li>
+		<li><%= report.details %></li>
+		<li><%= report.location %></li>
+		<li><%= report.image %></li>
+		<img src="<%= report.image %>">
+
+	      <%= link_to 'View', report_path(report.id) %>
+	      <%= link_to 'Delete', report, :method => 'delete' %>
+		<br/>
+	<% end %>
+	
+</div>
+
+

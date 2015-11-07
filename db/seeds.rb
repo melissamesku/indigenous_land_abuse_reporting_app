@@ -5,3 +5,11 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+Report.create({
+  headline: "Seed test", 
+  details: "Seed test.",
+  location: "Seed test, Brazil",
+  image: "http://dingo.care2.com/pictures/greenliving/uploads/2010/12/deforestation-tractor.jpg",
+  user_id: 2
+})
