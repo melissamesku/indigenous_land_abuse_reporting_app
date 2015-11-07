@@ -12,6 +12,7 @@ class ReportsController < ApplicationController
   end
 
   def show
+  	@report = Report.find(params[:id])
   	
   	# @user_id = User.find_by(name: params[:first_name])
   	# @reports = Report.where(user_id: @user_id)

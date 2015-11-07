@@ -9,7 +9,7 @@
 <body>
 	<nav>
 		<% if user_signed_in? %>
-		  Hi <strong><%= current_user.first_name %></strong>.
+		  <span class="grey">Logged in as <%= current_user.first_name %> </span> 
 		  <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %>
 		  <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
 		<% else %>
