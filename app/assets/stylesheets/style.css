@@ -25,7 +25,7 @@ nav a:hover {
 	padding-right:30px;
 }
 div {
-	margin-bottom: 20px;
+
 }
 .container {
 	padding: 20px;
@@ -34,7 +34,6 @@ div {
 	background-color: red;
 }
 .bkg {
-	position: fixed;
 	z-index: -1;
 	top:0px;
 	left:0;
@@ -67,11 +66,47 @@ div {
 .border-black {
 	border: 2px solid #000;
 	padding: 7px;
+	margin: 2px;
 	background: transparent;
+	text-decoration: none;
+	color: #000;
 }
-
-
-
+.border-black:hover {
+	background-color: #000;
+	color: #fff;
+}
+div.report {
+	background-color: #fff;
+	max-width: 700px;
+	border: 1px solid #ccc;
+	padding: 20px;
+	margin: 0 auto;
+}
+div.report li {
+	list-style-type: square;
+}
+div.report h2 {
+	margin: 0;
+}
+.alert {
+	text-align: right;
+	padding-right: 30px;
+	background-color: yellow;
+}
+div.report-links {
+	text-align: right;
+}
+.border-grey {
+	border: 2px solid #999;
+	padding: 4px;
+	background: transparent;
+	text-decoration: none;
+	color: #999;
+}
+.border-grey:hover {
+	background-color: #999;
+	color: #fff;
+}
 
 
 

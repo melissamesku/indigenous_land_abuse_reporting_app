@@ -1,0 +1,13 @@
+<div class="container">
+	<h1>Edit your report</h1>
+
+  <%= form_for @report do |form| %>
+	  <p>Headline: <br/><%= form.text_field :headline, :class => 'border-black' %></p>
+	  <p>Details: <br/><%= form.text_area :details, :class => 'border-black' %></p>
+	  <p>Location: <br/><%= form.text_field :location, :class => 'border-black' %></p>
+	  <p>Images, files, documents: <br/><%= form.text_field :image, :class => 'border-black' %></p>
+	  <br/>
+	  <%= form.submit "Submit report", :class => 'border-black' %>
+	<% end %>
+
+</div>

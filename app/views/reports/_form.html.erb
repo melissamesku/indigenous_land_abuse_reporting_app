@@ -1,10 +1,7 @@
-reports _form
-
 <%= form_for @report do |form| %>
-  Headline: <%= form.text_field :headline, :class => 'testing' %></br>
-  Details: <%= form.text_field :details %></br>
-  Location: <%= form.text_field :location %></br>
-  Upload images, files, documents: <%= form.text_field :image %></br>
-  <%= form.hidden_field :user_id, :value => current_user.id %>
-  <%= form.submit %>
+  <p>Headline: <br/><%= form.text_field :headline, :class => 'border-black' %></p>
+  <p>Details: <br/><%= form.text_area :details, :class => 'border-black' %></p>
+  <p>Location: <br/><%= form.text_field :location, :class => 'border-black' %></p>
+  <p>Upload images, files, documents: <br/><%= form.text_field :image, :class => 'border-black' %></p>
+  <%= form.submit "Submit report", :class => 'border-black' %>
 <% end %>

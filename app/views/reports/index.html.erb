@@ -1,24 +1,36 @@
-reports#index page
+<div class="container">
+	<h1>Recent Reports</h1>
 
-<div>
-	<% @reports.each do |report| %>
-		<% @users.each do |user| %>
-			<% user.reports.each do |report|%>
-			    <%= user.first_name %>
-			<% end %>
-		<%end%>
+  <% @reports.each do |report| %>
+	  <div class="report">
+	  	<h2><%= report.headline %></h2>
 
-		<li><%= report.headline %></li>
-		<li><%= report.details %></li>
-		<li><%= report.location %></li>
-		<li><%= report.image %></li>
-		<img src="<%= report.image %>">
+			<img src="<%= report.image %>" class="border-black">
+			<div class="report-info">
+			
+			<p><%= report.details %></p>
+			<li>Location: <%= report.location %></li>
 
-	      <%= link_to 'View', report_path(report.id) %>
-	      <%= link_to 'Delete', report, :method => 'delete' %>
-		<br/>
-	<% end %>
-	
+			<% @users.each do |user| %>
+			  <% user.reports.each do |report|%>
+				<li>Report made by <%= user.first_name %> <%= user.last_name %></li>
+			  <% end %>
+			<%end%>
+
+			</div>
+
+			<br/>
+			<div class="report-links">
+		  	<%= link_to 'View', report_path(report.id), :class => 'border-grey' %>
+		  	<%= link_to 'Update this report', edit_report_path(report.id), :class => 'border-grey' %>
+		  	<%= link_to 'Delete', report, :method => 'delete', :class => 'border-grey', :confirm => "Are you sure you want to delete this report?" %>
+		  </div>
+			<br/>
+
+		</div>
+  <% end %>
+
 </div>
+
 
 
