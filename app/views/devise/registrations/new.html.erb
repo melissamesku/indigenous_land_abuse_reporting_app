@@ -1,5 +1,5 @@
 <div class="container">
-  <div class="opacity-box">
+  <div class="right">
     <h1>Sign up</h1>
 
     <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
@@ -43,10 +43,12 @@
       <div class="actions">
         <%= f.submit "Sign up", :class => 'border-black'  %>
       </div>
+      <p class="opacity-box"><a href="/users/password/new">Forgot your password?</a></p>
     <% end %>
   </div>
 
   <div class="landing-page-content">
-    <p class="red-text">Whether you're a journalist or a defender of your homeland, by signing up you're helping to protect the most biodiverse, sacred, threatened places on Earth.</p>
+    <p class="red-text">Whether you're a journalist or a <br/>defender of your homeland,<br/> by signing up you're helping to <br/>protect the most biodiverse, <br/>sacred, threatened places on Earth.</p>
   </div>
+  <div style="clear: both;"></div>
 </div>

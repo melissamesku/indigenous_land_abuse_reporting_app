@@ -9,8 +9,12 @@
 		<li>Report made by <%= user.first_name %> <%= user.last_name %></li>
 		<br/>
 	<div class="report-links">
-  	<%= link_to 'Update this report', edit_report_path, :class => 'border-grey' %>
-  	<%= link_to 'Delete this report', report, :method => 'delete', :class => 'border-grey', :confirm => "Are you sure you want to delete this report?" %>
+		<% if @report.user_id = current_user[:id] %>
+			<%= link_to 'Update this report', edit_report_path, :class => 'border-grey' %>
+	  	<%= link_to 'Delete this report', report, :method => 'delete', :class => 'border-grey', :confirm => "Are you sure you want to delete this report?" %>
+	  	<% else %>
+	  	<p>you can't see this </p>
+		<% end %>
   </div>
 	  <% end %>
 	<%end%>

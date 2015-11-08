@@ -2,7 +2,11 @@
   <p>Headline: <br/><%= form.text_field :headline, :class => 'border-black' %></p>
   <p>Details: <br/><%= form.text_area :details, :class => 'border-black' %></p>
   <p>Location: <br/><%= form.text_field :location, :class => 'border-black' %></p>
-  <p>Upload images, files, documents: <br/><%= form.text_field :image, :class => 'border-black' %></p>
+  <p>Upload photos, files, documents: <br/><%= form.file_field :image, :class => 'border-black' %></p>
+  <p><%= form.hidden_field :user_id, :value => current_user.id %></p>
   <%= form.submit "Submit report", :class => 'border-black' %>
+  <br/>
+  <br/>
+  <a href="/reports" class="border-black" style="font-size: 11px; font-family:'Arial'">Cancel</a>
 
 <% end %>

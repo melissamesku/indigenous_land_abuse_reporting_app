@@ -24,20 +24,35 @@ class ReportsController < ApplicationController
   end
 
   def create
-  	@report = Report.new(report_params)
-  	if @report.save
-  		redirect_to reports_path, :notice => "Your report has been saved."
-  	else 
-  		render :new
-  	end
+    @report = Report.create(report_params)
+    @user = current_user
+
+    # @user = current_user
+    # @app = @user.apps.create(params[:app])
+
+    # @users = User.all
+    # @report.user_id << current_user
+    if @report.save
+      redirect_to reports_path, :notice => "Your report has been saved."
+    else 
+      render :new
+    end
   end
+
+  # def create
+  # 	@report = Report.new(report_params)
+  # 	if @report.save
+  # 		redirect_to reports_path, :notice => "Your report has been saved."
+  # 	else 
+  # 		render :new
+  # 	end
+  # end
 
   def edit
   	@report = Report.find(params[:id])
-  	# @report = Report.new
-  	# if @report[:user_id] != current_user[:id]
-  	# 	redirect_to root_path
-  	# end
+    if @report[:user_id] != current_user[:id]
+  		redirect_to root_path
+  	end
   end
 
   def update
@@ -56,6 +71,10 @@ class ReportsController < ApplicationController
   end
 
   private
+
+  def belongs_to_user?
+    scope.where(:id => record.id).exists?
+  end
 
   def report_params
     params.require(:report).permit(:headline, :details, :location, :public)

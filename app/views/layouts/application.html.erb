@@ -8,7 +8,7 @@
 </head>
 <body>
 	<nav>
-		<img src="../../logo.jpg">
+		<a href="/"><img src="../../logo.jpg"></a>
 		<% if user_signed_in? %>
 		  <span class="grey">Logged in as <%= current_user.first_name %> </span> 
 		  <%= link_to "View all reports", reports_path %>
@@ -16,8 +16,8 @@
 		  <%= link_to 'Profile', edit_user_registration_path %>
 		  <%= link_to "Log out", destroy_user_session_path, method: :delete %>
 		<% else %>
-		  <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %>
-		  <%= link_to "Log in", new_user_session_path, :class => 'navbar-link'  %>
+		  <%= link_to "Sign up", new_user_registration_path %>
+		  <%= link_to "Log in", new_user_session_path  %>
 		<% end %>
 	</nav>
 
@@ -30,7 +30,7 @@
 
 
 	<%= yield %>
-
-
+<div style="clear: both;"></div>
+<footer><img src="/../../logo.jpg"> &copy; 2015</footer>
 </body>
 </html>
