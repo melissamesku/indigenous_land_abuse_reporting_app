@@ -95,9 +95,9 @@ footer img {
     margin: 0px;
     background-color: rgba(0, 0, 0, .6);
 }
-.col1, .col2, .col3 {
+.col, .col, .col {
 	width: 30%;
-	float: left;
+	display:inline-block;
 	padding: 0 0 0 3%;
 }
 .red-text {
