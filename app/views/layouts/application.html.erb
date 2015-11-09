@@ -7,6 +7,7 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+
 	<nav>
 		<a href="/"><img src="../../logo.jpg"></a>
 		<% if user_signed_in? %>
@@ -30,7 +31,9 @@
 
 
 	<%= yield %>
-<div style="clear: both;"></div>
-<footer><img src="/../../logo.jpg"> &copy; 2015</footer>
+	<div style="clear: both;"></div>
+
+	<footer><img src="/../../logo.jpg"> &copy; 2015</footer>
+
 </body>
 </html>

@@ -1,70 +1,68 @@
 <div class="bkg">
-    <div class="opacity-box">
-    <h2>Log in</h2>
+  <div class="opacity-box">
+  <h2>Log in</h2>
 
-    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-      <div class="field">
-        <%= f.label :email %><br />
-        <%= f.email_field :email, autofocus: true, :class => 'border-grey' %>
-      </div>
-
-      <div class="field">
-        <%= f.label :password %><br />
-        <%= f.password_field :password, autocomplete: "off", :class => 'border-grey' %>
-      </div>
-
-      <% if devise_mapping.rememberable? -%>
-        <div class="field">
-          <%= f.check_box :remember_me %>
-          <%= f.label :remember_me %>
-        </div>
-      <% end -%>
-
-      <div class="actions">
-        <%= f.submit "Log in", :class => 'border-grey' %>
-      </div>
-    <% end %>
-
-    <p><a href="/users/password/new">Forgot your password?</a> | <a href="/users/sign_up">Sign up</a></p>
-
-  </div>
-
-  <div class="landing-page-content">
-    <h1>Indigenous territory under threat</h1>
-    <p class="red-text">Every day, thousands of acres<br> of protected indigenous land <br/>is lost to illegal resource extraction.</p>
-    <h2>Illegal logging, illegal cattle ranching and illegal mining<br/> are threatening the world's most biodiverse areas.</h2>
-    
-    <br/>
-    <br/>
-    <br/>
-
-    <div class="call-to-action">
-      <h2 class="centered">Join us and help protect these sacred places</h2>
-      <div class="col">
-        <p class="red-text centered">For journalists</p>
-        <hr class="red-text">
-        <li>Get breaking stories as they emerge</li>
-        <li>Follow the story as it develops</li>
-        <li>Connect directly with indigenous land defenders on the front lines</li>
-      </div>
-      <div class="col">
-        <p class="red-text centered">For organizations</p>
-        <hr class="red-text">
-        <li>Find out first about emerging threats</li>
-        <li>Follow up with those in the know</li>
-        <li>Connect with indigenous groups who need your support and expertise</li>
-      </div>
-      <div class="col">
-        <p class="red-text centered">For land defenders</p>
-        <hr class="red-text">
-        <li>Protect your land by reporting any illegal incursions or threats</li>
-        <li>Get contacted immediately by media and indigenous support organizations</li>
-      </div>
-      <div style="clear: both;"></div>
+  <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    <div class="field">
+      <%= f.label :email %><br />
+      <%= f.email_field :email, autofocus: true, :class => 'border-grey' %>
     </div>
-  </div>
 
-  <br/>
-  <br/>
+    <div class="field">
+      <%= f.label :password %><br />
+      <%= f.password_field :password, autocomplete: "off", :class => 'border-grey' %>
+    </div>
+
+    <% if devise_mapping.rememberable? -%>
+      <div class="field">
+        <%= f.check_box :remember_me %>
+        <%= f.label :remember_me %>
+      </div>
+    <% end -%>
+
+    <div class="actions">
+      <%= f.submit "Log in", :class => 'border-grey' %>
+    </div>
+  <% end %>
+
+  <p><a href="/users/password/new">Forgot your password?</a> | <a href="/users/sign_up">Sign up</a></p>
 
 </div>
+
+<div class="landing-page-content">
+  <h1>Indigenous territory under threat</h1>
+  <p class="red-text">Every day, thousands of acres<br> of protected indigenous land <br/>are lost to illegal resource extraction</p>
+  <h2>Illegal logging, illegal cattle ranching and illegal mining<br/> are threatening the world's most biodiverse areas</h2>
+  
+  <br/>
+  <br/>
+  <br/>
+
+  <div class="call-to-action">
+    <h2 class="centered">Join us and help protect these sacred places</h2>
+    <div class="col">
+      <p class="red-text centered">For journalists</p>
+      <hr class="red-text">
+      <li>Get breaking stories as they emerge</li>
+      <li>Follow the story as it develops</li>
+      <li>Connect directly with indigenous land defenders on the front lines</li>
+    </div>
+    <div class="col">
+      <p class="red-text centered">For organizations</p>
+      <hr class="red-text">
+      <li>Find out first about emerging threats</li>
+      <li>Follow up with those in the know</li>
+      <li>Connect with indigenous groups who need your support and expertise</li>
+    </div>
+    <div class="col">
+      <p class="red-text centered">For land defenders</p>
+      <hr class="red-text">
+      <li>Protect your land by reporting any illegal incursions or threats</li>
+      <li>Get contacted immediately by media and indigenous support organizations</li>
+    </div>
+    <div style="clear: both;"></div>
+  </div>
+</div>
+<br/>
+<br/>
+

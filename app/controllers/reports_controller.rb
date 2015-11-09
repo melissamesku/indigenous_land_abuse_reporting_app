@@ -1,22 +1,14 @@
 class ReportsController < ApplicationController
   before_action :authenticate_user!
 
-# def author
-# 	@report = Report.where user_id: params[:user_id]
-# end
-
   def index
   	@reports = Report.all
   	@users = User.all
-  	# @user = User.find_by(first_name: params[:id])
   end
 
   def show
   	@report = Report.find(params[:id])
     @users = User.all
-  	
-  	# @user_id = User.find_by(name: params[:first_name])
-  	# @reports = Report.where(user_id: @user_id)
   end
 
   def new
@@ -26,9 +18,6 @@ class ReportsController < ApplicationController
   def create
     @report = Report.create(report_params)
     @user = current_user
-
-    # @user = current_user
-    # @app = @user.apps.create(params[:app])
 
     # @users = User.all
     # @report.user_id << current_user
@@ -68,6 +57,11 @@ class ReportsController < ApplicationController
   	@report = Report.find(params[:id])
   	@report.destroy
   	redirect_to reports_path, :notice => "Your report has been deleted."
+    # if @report[:user_id] != current_user[:id]
+    #   redirect_to root_path
+    # else
+    #   redirect_to reports_path, :notice => "Your report has been deleted."
+    # end
   end
 
   private
