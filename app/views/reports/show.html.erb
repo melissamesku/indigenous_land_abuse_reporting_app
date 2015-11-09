@@ -2,8 +2,10 @@
 	<h1><%= @report.headline %></h1>
 	<img src="<%= @report.image %>" class="border-black">
 	<p> <%= @report.details %></p>
-	<p> Location: <%= @report.location %></p>
-
+	<p><strong><%= @report.location %></strong></p>
+	<li>Contact <%= @report.contact_name %></li>
+	<li>Contact info: <%= @report.contact_info %></li>
+	<li>Last updated <%= @report.date_listed %></li>
 
 	<div class="report-links">
 
