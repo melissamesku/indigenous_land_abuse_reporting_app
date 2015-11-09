@@ -6,6 +6,7 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
+
 Report.create({
   headline: "Alleged sustainably-produced palm oil growing illegally in Indonesian national park", 
   details: "Tesso Nilo National Park has illegal palm plantations owned by two companies who claim to be sources of sustainably-produced palm oil. Over 52,000 hectares of natural forests in the area have already been illegally converted into palm oil plantations.",
