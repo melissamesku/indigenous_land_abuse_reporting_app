@@ -5,17 +5,21 @@
 	  <div class="report">
 	  	<h2><%= report.headline %></h2>
 
-			<img src="<%= report.image %>" class="border-black">
+			<img src="<%= report.image %>" class="border-black report-image">
 			<div class="report-info">
 			
 			<p><%= report.details %></p>
-			<li>Location: <%= report.location %></li>
+			<p><strong><%= report.location %></strong></p>
+			<li>Contact <%= report.contact_name %></li>
+			<li>Contact info: <%= report.contact_info %></li>
+			<li>Last updated <%= report.date_listed %></li>
 
+<!-- 
 			<% @users.each do |user| %>
 			  <% user.reports.each do |report|%>
 				<li>Report made by <%= user.first_name %> <%= user.last_name %></li>
 			  <% end %>
-			<%end%>
+			<%end%> -->
 
 			</div>
 

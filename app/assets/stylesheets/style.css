@@ -48,7 +48,7 @@ footer img {
 }
 .container {
 	padding: 20px;
-	max-width: 800px;
+	max-width: 880px;
 	margin: 0 auto;
 }
 .bkg {
@@ -124,12 +124,15 @@ div.report {
 	border: 1px solid #ccc;
 	padding: 20px;
 	margin: 10px auto;
-}
+} 
 div.report li {
 	list-style-type: square;
 }
 div.report h2 {
 	margin: 0;
+}
+.report-image {
+	max-width: 500px;
 }
 .alert {
 	text-align: right;

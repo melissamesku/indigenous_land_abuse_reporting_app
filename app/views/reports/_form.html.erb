@@ -3,6 +3,9 @@
   <p>Details: <br/><%= form.text_area :details, :class => 'border-black' %></p>
   <p>Location: <br/><%= form.text_field :location, :class => 'border-black' %></p>
   <p>Upload photos, files, documents: <br/><%= form.file_field :image, :class => 'border-black' %></p>
+  <p>Contact name or entity: <br/><%= form.text_field :contact_name, :class => 'border-black' %></p>
+  <p>Contact information: <br/><%= form.text_field :contact_info, :class => 'border-black' %></p>
+  <p>Today's date: <br/><%= form.text_field :date_listed, :class => 'border-black' %></p>
   <p><%= form.hidden_field :user_id, :value => current_user.id %></p>
   <%= form.submit "Submit report", :class => 'border-black' %>
   <br/>
