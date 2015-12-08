@@ -13,11 +13,13 @@ class ReportsController < ApplicationController
 
   def new
   	@report = Report.new
+
   end
 
   def create
     @report = Report.create(report_params)
-    @user = current_user
+    # @user = current_user
+    @report.user_id = current_user.id
 
     # @users = User.all
     # @report.user_id << current_user
@@ -27,6 +29,9 @@ class ReportsController < ApplicationController
       render :new
     end
   end
+
+  ################################# apparently "new" and "edit" are used to render the view,
+  ################################# and "create" and "update" are used to touch the db
 
   # def create
   # 	@report = Report.new(report_params)
@@ -42,6 +47,7 @@ class ReportsController < ApplicationController
     if @report[:user_id] != current_user[:id]
   		redirect_to root_path
   	end
+
   end
 
   def update
@@ -71,7 +77,11 @@ class ReportsController < ApplicationController
   end
 
   def report_params
-    params.require(:report).permit(:headline, :details, :location, :public)
+    params.require(:report).permit(:headline, :details, :location, :image, :contact_name, :contact_info, :date_listed)
+  end
+
+  def user_params
+    params.require(:user).permit(:id)
   end
 
 end

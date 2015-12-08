@@ -1,27 +1,25 @@
 <div class="container">
 	<h1>Recent Reports</h1>
 
-  <% @reports.each do |report| %>
-	  <div class="report">
-	  	<h2><%= report.headline %></h2>
-
-			<img src="<%= report.image %>" class="border-black report-image">
-			<div class="report-info">
-			
+  	<% @reports.each do |report| %>
+	<div class="report">
+  		<h2><%= report.headline %></h2>
+		<img src="<%= report.image %>" class="border-black report-image">
+		<div class="report-info">
 			<p><%= report.details %></p>
 			<p><strong><%= report.location %></strong></p>
 			<li>Contact <%= report.contact_name %></li>
 			<li>Contact info: <%= report.contact_info %></li>
 			<li>Last updated <%= report.date_listed %></li>
-
-			</div>
-
-			<br/>
-			<div class="report-links">
-		  	<%= link_to 'View this report', report_path(report.id), :class => 'border-grey' %>
-		  </div>
 		</div>
-  <% end %>
+
+		<br/>
+		<div class="report-links">
+	  	<%= link_to 'View this report', report_path(report.id), :class => 'border-grey' %>
+		</div>
+	</div>
+  	<% end %>
+  	
 </div>
 <br/>
 <br/>
