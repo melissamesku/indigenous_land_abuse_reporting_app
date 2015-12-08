@@ -61,13 +61,14 @@ class ReportsController < ApplicationController
 
   def destroy
   	@report = Report.find(params[:id])
-  	@report.destroy
-  	redirect_to reports_path, :notice => "Your report has been deleted."
-    # if @report[:user_id] != current_user[:id]
-    #   redirect_to root_path
-    # else
-    #   redirect_to reports_path, :notice => "Your report has been deleted."
-    # end
+  	
+  	# redirect_to reports_path, :notice => "Your report has been deleted."
+    if @report[:user_id] = current_user[:id]
+      @report.destroy
+      redirect_to reports_path, :notice => "Your report has been deleted."
+    else
+      redirect_to root_path
+    end
   end
 
   private
