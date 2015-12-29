@@ -1,7 +1,7 @@
-==LandDefense web app
+==Land Defense web app
 
-I designed and built LandDefense using Ruby on Rails with a SQL database. 
+I designed and built Land Defense using Ruby on Rails with a SQL database. 
 
-The app is intended for use by indigenous groups and supporting organizations to report on land rights abuses on indigenous territory. 
+The app is intended for use by indigenous groups and supporting organizations to report on land rights abuses on indigenous territory. The database has been seeded with sample content drawn from contemporary news stories about land rights violations in Amazonia and rainforests in Indonesia. 
 
-LandDefense is deployed on Heroku (https://sleepy-depths-8976.herokuapp.com).
+Land Defense is deployed on Heroku (https://sleepy-depths-8976.herokuapp.com).
